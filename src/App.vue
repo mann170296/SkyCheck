@@ -1,28 +1,43 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <div class="header">
+      <div class="social__icons">
+        Icons here
+      </div>
+      <div class="logo">
+        SkyCheck<span class="logo__dot">.</span>
+      </div>
+      <div class="search">
+        Search bar here
+      </div>
+    </div>
+
+    <main class="content__area">
+      <div class="left__side">F</div>
+      <div class="right__side">
+        <div class="right__side--main">
+          WEATHER
+        </div>
+        <div class="right__side--secondary">
+          IMAGE
+        </div>
+      </div>
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    data() {
+      return {
+        url: 'http://api.weatherstack.com/current',
+        location: '',
+        key: process.env.VUE_APP_KEY,
+      }
+    },
+
+    created() {
+      
+    }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

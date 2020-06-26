@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;0,700;1,900&display=swap');
+
+$color-1: #16817a;
+$color-2: #024249;
+$color-3: #fa744f;
+$color-4: #f79071;
+
+$color-blue: #63B6F7;
+
+$color-white: #fff;
+$color-black: #000;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    max-height: 100vh;
+    background: linear-gradient(to right, rgba($color-4, .4), rgba($color-blue, .4) 55%);
+}
+
+.header {
+    padding: 1rem 5rem 0 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Oswald";
+    font-size: 3.5rem;
+
+    & .logo__dot {
+        font-size: 5rem;
+    }
+}
+
+.content__area {
+    padding: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right__side {
+    display: flex;
+    justify-content: space-around;
+    padding: 5rem;
+
+    &--main {
+        flex: 0 0 65%;
+    }
+
+    &--secondary {
+        flex: 0 0 30%;
+    }
+}
+
